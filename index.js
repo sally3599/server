@@ -1,17 +1,12 @@
-var app = require('express')();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var express = require('express');
 
-app.get('/', function(req, res){
-  res.sendfile('index.html');
+var app = express.createServer(express.logger());
+
+app.get('/', function(request, response) {
+  response.send('Hello World!');
 });
 
-io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
-  });
-});
-
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
 });
