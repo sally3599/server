@@ -1,9 +1,26 @@
 {
-  "name": "socket-chat-example",
+  "name": "chat",
   "version": "0.0.1",
   "description": "my first socket.io app",
   "dependencies": {
-    "express": "4.3.1",
-    "socket.io": "1.0.2"
-  }
+    "express": "^4.3.1",
+    "socket.io": "^1.0.2"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sally3599/server.git"
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "doctorli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sally3599/server/issues"
+  },
+  "homepage": "https://github.com/sally3599/server"
 }
